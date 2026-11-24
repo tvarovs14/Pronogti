@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Про ногти — студия маникюра и педикюра в Лисках</title>
+  <meta name="description" content="Студия ногтевого сервиса «Про ногти» в г. Лиски, пр-т Ленина, 49. Ранний приём с 08:00, стерилизация по СанПиН, гарантия 7 дней на покрытие.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-page: #F7F9F8;
+      --bg-card: #FFFFFF;
+      --bg-subtle: #ECF1EE;
+      --text-main: #111614;
+      --text-secondary: #5B6661;
+      --accent: #156047;
+      --accent-hover: #104B37;
+      --border: #E2E6E4;
+      --radius: 12px;
+      --font-heading: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      transition: padding-bottom 0.2s ease;
+    }
+
+    body.has-selection {
+      padding-bottom: 104px;
+    }
+
+    .tabular {
+      font-variant-numeric: tabular-nums;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 24px;
+      }
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background-color: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px 16px;
+      padding: 12px 0;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+    }
+
+    .logo-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .header-right {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px 16px;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .header-right {
+        width: auto;
+        justify-content: flex-end;
+      }
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    .header-badge svg {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .header-phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+      padding: 6px 2px;
+      transition: color 0.15s ease;
+    }
+
+    .header-phone:hover {
+      color: var(--accent);
+    }
+
+    .header-phone svg {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: var(--radius);
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.2;
+      padding: 14px 20px;
+      border: 1px solid transparent;
+      transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      background-color: var(--bg-card);
+      border-color: var(--border);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--bg-subtle);
+      border-color: #CBD3CF;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 32px 0 40px;
+    }
+
+    @media (min-width: 768px) {
+      .hero {
+        padding: 48px 0 56px;
+      }
+    }
+
+    .hero-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-card {
+        padding: 44px;
+      }
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.16;
+      letter-spacing: -0.025em;
+      color: var(--text-main);
+      max-width: 740px;
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 44px;
+      }
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      max-width: 650px;
+      margin-bottom: 28px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-subtitle {
+        font-size: 17px;
+      }
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    @media (min-width: 520px) {
+      .hero-actions {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .hero-highlights {
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+    }
+
+    .highlight-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    .highlight-item svg {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* Section Headings */
+    .section {
+      padding: 20px 0 40px;
+    }
+
+    @media (min-width: 768px) {
+      .section {
+        padding: 28px 0 56px;
+      }
+    }
+
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .section-header {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+    }
+
+    @media (min-width: 768px) {
+      .section-title {
+        font-size: 30px;
+      }
+    }
+
+    .section-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: 6px;
+    }
+
+    /* Category Tabs */
+    .category-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 4px;
+      gap: 4px;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .category-tabs {
+        width: auto;
+        min-width: 440px;
+      }
+    }
+
+    .category-tab {
+      padding: 10px 10px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-align: center;
+      border: 1px solid transparent;
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    @media (min-width: 460px) {
+      .category-tab {
+        padding: 10px 16px;
+        font-size: 14px;
+      }
+    }
+
+    .category-tab[aria-selected="true"] {
+      background-color: var(--bg-card);
+      border-color: var(--border);
+      color: var(--text-main);
+    }
+
+    .category-tab:hover:not([aria-selected="true"]) {
+      color: var(--text-main);
+    }
+
+    /* Price List Grid */
+    .price-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .price-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+    }
+
+    .service-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      transition: border-color 0.15s ease, background-color 0.15s ease;
+      user-select: none;
+    }
+
+    .service-card:hover {
+      border-color: #BFC9C4;
+    }
+
+    .service-card.is-selected {
+      border-color: var(--accent);
+      background-color: var(--bg-subtle);
+    }
+
+    .service-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .service-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 1.3;
+      color: var(--text-main);
+    }
+
+    .service-select-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: 8px;
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .service-card.is-selected .service-select-badge {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: #FFFFFF;
+    }
+
+    .service-composition {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+
+    .service-bottom {
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .service-duration {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .service-duration svg {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .service-price {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text-main);
+      letter-spacing: -0.01em;
+    }
+
+    /* Studio Standards */
+    .standards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .standards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+    }
+
+    .standard-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .standard-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+    }
+
+    .standard-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.3;
+      color: var(--text-main);
+    }
+
+    .standard-text {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+
+    /* Location Section */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    @media (min-width: 840px) {
+      .location-grid {
+        grid-template-columns: 5fr 7fr;
+        gap: 20px;
+        align-items: stretch;
+      }
+    }
+
+    .location-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .info-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .info-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 2px;
+    }
+
+    .info-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.4;
+    }
+
+    .info-note {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+
+    .map-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .map-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .map-legend {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-main);
+    }
+
+    .map-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      background-color: var(--accent);
+      display: inline-block;
+    }
+
+    .map-frame {
+      width: 100%;
+      background-color: var(--bg-page);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .map-frame svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background-color: var(--bg-card);
+      padding: 22px 0;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    /* Quick WhatsApp Booking Drawer */
+    .quick-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 50;
+      background-color: var(--bg-card);
+      border-top: 1px solid var(--border);
+      transform: translateY(100%);
+      transition: transform 0.2s ease;
+    }
+
+    .quick-bar.is-visible {
+      transform: translateY(0);
+    }
+
+    .quick-bar-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 12px 0;
+    }
+
+    @media (min-width: 680px) {
+      .quick-bar-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+      }
+    }
+
+    .quick-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    @media (min-width: 680px) {
+      .quick-info {
+        justify-content: flex-start;
+        gap: 24px;
+      }
+    }
+
+    .quick-label {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .quick-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .quick-metrics {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .quick-time {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .quick-sum {
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .quick-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-clear {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius);
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .btn-clear:hover {
+      color: var(--text-main);
+      border-color: #BFC9C4;
+    }
+
+    .quick-wa-btn {
+      flex: 1;
+      padding: 12px 18px;
+      font-size: 14px;
+    }
+
+    @media (min-width: 680px) {
+      .quick-wa-btn {
+        flex: initial;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="logo">
+          <span class="logo-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22c4.5 0 7-3.2 7-7.5 0-4.8-4.2-9.2-7-12.5-2.8 3.3-7 7.7-7 12.5C5 18.8 7.5 22 12 22Z"/>
+              <path d="M12 22V11"/>
+            </svg>
+          </span>
+          <span>ПРО НОГТИ</span>
+        </a>
+
+        <div class="header-right">
+          <span class="header-badge tabular">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10Z"/>
+              <circle cx="12" cy="11" r="2"/>
+            </svg>
+            <span>Лиски, пр-т Ленина, 49 · 08:00–20:00</span>
+          </span>
+
+          <a href="tel:+79204555806" class="header-phone tabular">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/>
+            </svg>
+            <span>+7 920 455-58-06</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-pill tabular">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 7v5l3 2"/>
+            </svg>
+            <span>Открыты с 08:00 утра — удобно успеть перед работой</span>
+          </div>
+
+          <h1 class="hero-title">Про ногти — студия маникюра и педикюра в Лисках</h1>
+          <p class="hero-subtitle">
+            Ранний приём с 08:00 ежедневно, трёхэтапная стерилизация инструмента по СанПиН с вскрытием крафт-пакета при вас и аккуратный минималистичный дизайн с гарантией стойкости.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/79204555806" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z"/>
+              </svg>
+              <span>Записаться в WhatsApp</span>
+            </a>
+
+            <a href="#price" class="btn btn-secondary">
+              <span>Смотреть прайс</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 5v14"/>
+                <path d="m19 12-7 7-7-7"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="highlight-item tabular">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6 9 17l-5-5"/>
+              </svg>
+              <span>Приём с 08:00 до 20:00</span>
+            </div>
+            <div class="highlight-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6 9 17l-5-5"/>
+              </svg>
+              <span>Инструмент по СанПиН</span>
+            </div>
+            <div class="highlight-item tabular">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6 9 17l-5-5"/>
+              </svg>
+              <span>Гарантия на покрытие 7 дней</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="price" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Прайс-лист студии</h2>
+            <p class="section-desc">Нажмите на нужную услугу, чтобы сразу подставить её в заявку WhatsApp</p>
+          </div>
+
+          <div class="category-tabs" role="tablist" aria-label="Категории услуг">
+            <button type="button" class="category-tab" role="tab" aria-selected="true" data-category="manicure">Маникюр</button>
+            <button type="button" class="category-tab" role="tab" aria-selected="false" data-category="pedicure">Педикюр</button>
+            <button type="button" class="category-tab" role="tab" aria-selected="false" data-category="design">Укрепление и дизайн</button>
+          </div>
+        </div>
+
+        <div class="price-grid" id="price-grid" role="tabpanel"></div>
+      </div>
+    </section>
+
+    <section id="standards" class="section">
+      <div class="container">
+        <div>
+          <h2 class="section-title">Стандарты студии</h2>
+          <p class="section-desc">Чёткий регламент безопасности, времени и качества каждой процедуры</p>
+        </div>
+
+        <div class="standards-grid">
+          <article class="standard-card">
+            <div class="standard-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+              </svg>
+            </div>
+            <h3 class="standard-title tabular">С 08:00 до 20:00 ежедневно</h3>
+            <p class="standard-text">
+              Открываемся на два часа раньше большинства салонов города: можно сделать свежий маникюр перед рабочим днём или записаться вечером после смены.
+            </p>
+          </article>
+
+          <article class="standard-card">
+            <div class="standard-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="standard-title">3 этапа стерилизации по СанПиН</h3>
+            <p class="standard-text">
+              Дезинфекция в растворе, предстерилизационная очистка и сухожаровой шкаф при 180 °C. Крафт-пакет с индикатором вскрывается строго при вас.
+            </p>
+          </article>
+
+          <article class="standard-card">
+            <div class="standard-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2Z"/>
+              </svg>
+            </div>
+            <h3 class="standard-title tabular">Гарантия 7 дней на покрытие</h3>
+            <p class="standard-text">
+              Работаем на проверенных гипоаллергенных базах и гелях. Если в течение недели появится скол или отслойка — бесплатно переделаем ноготь в удобное время.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="location" class="section">
+      <div class="container">
+        <div>
+          <h2 class="section-title">Как нас найти</h2>
+          <p class="section-desc">Центральная улица города Лиски, удобный вход со стороны проспекта</p>
+        </div>
+
+        <div class="location-grid">
+          <div class="location-card">
+            <div class="info-list">
+              <div class="info-row">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10Z"/>
+                    <circle cx="12" cy="11" r="2"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="info-label">Адрес студии</div>
+                  <div class="info-value tabular">г. Лиски, проспект Ленина, 49</div>
+                </div>
+              </div>
+
+              <div class="info-row">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="info-label">Телефон и WhatsApp</div>
+                  <div class="info-value tabular"><a href="tel:+79204555806">+7 920 455-58-06</a></div>
+                </div>
+              </div>
+
+              <div class="info-row">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M12 7v5l3 2"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="info-label">График работы</div>
+                  <div class="info-value tabular">Ежедневно, 08:00–20:00</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-note">
+              Приём ведётся по предварительной записи через WhatsApp или по телефону. Для утренних визитов с 08:00 рекомендуем бронировать окно за 1–2 дня.
+            </div>
+
+            <a href="https://yandex.ru/maps/?text=%D0%9B%D0%B8%D1%81%D0%BA%D0%B8%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%B0%2C%2049" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+              </svg>
+              <span>Открыть маршрут в Яндекс.Картах</span>
+            </a>
+          </div>
+
+          <div class="map-card">
+            <div class="map-top">
+              <span>Схема проспекта Ленина · г. Лиски</span>
+              <span class="map-legend">
+                <span class="map-dot"></span>
+                <span>пр-т Ленина, 49</span>
+              </span>
+            </div>
+
+            <div class="map-frame">
+              <svg viewBox="0 0 640 360" role="img" aria-label="Схема расположения студии Про ногти по адресу г. Лиски, проспект Ленина, 49">
+                <rect x="0" y="0" width="640" height="360" fill="#FFFFFF"/>
+
+                <!-- Left Neighborhood Block -->
+                <rect x="24" y="24" width="224" height="112" rx="10" fill="#F7F9F8" stroke="#E2E6E4" stroke-width="1"/>
+                <text x="42" y="54" fill="#5B6661" font-family="Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="0.04em">ЦЕНТРАЛЬНАЯ ЧАСТЬ</text>
+                <text x="42" y="76" fill="#111614" font-family="Inter, sans-serif" font-size="13" font-weight="500">Направление к ж/д вокзалу</text>
+                <text x="42" y="96" fill="#5B6661" font-family="Inter, sans-serif" font-size="12">и центральной площади</text>
+
+                <!-- Bottom Left Block -->
+                <rect x="24" y="232" width="224" height="104" rx="10" fill="#F7F9F8" stroke="#E2E6E4" stroke-width="1"/>
+                <text x="42" y="266" fill="#111614" font-family="Inter, sans-serif" font-size="13" font-weight="500">Жилой квартал</text>
+                <text x="42" y="286" fill="#5B6661" font-family="Inter, sans-serif" font-size="12">Чётная сторона проспекта</text>
+
+                <!-- Cross Street -->
+                <rect x="272" y="0" width="44" height="360" fill="#ECF1EE"/>
+                <line x1="272" y1="0" x2="272" y2="360" stroke="#E2E6E4" stroke-width="1.5"/>
+                <line x1="316" y1="0" x2="316" y2="360" stroke="#E2E6E4" stroke-width="1.5"/>
+                <line x1="294" y1="12" x2="294" y2="348" stroke="#BFC9C4" stroke-width="1" stroke-dasharray="6 6"/>
+
+                <!-- Prospekt Lenina Main Artery -->
+                <rect x="0" y="156" width="640" height="56" fill="#ECF1EE"/>
+                <line x1="0" y1="156" x2="640" y2="156" stroke="#111614" stroke-width="1.5"/>
+                <line x1="0" y1="212" x2="640" y2="212" stroke="#111614" stroke-width="1.5"/>
+                <line x1="16" y1="184" x2="624" y2="184" stroke="#5B6661" stroke-width="1" stroke-dasharray="10 8"/>
+
+                <!-- Prospekt Label -->
+                <rect x="42" y="171" width="186" height="26" rx="6" fill="#FFFFFF" stroke="#E2E6E4" stroke-width="1"/>
+                <text x="135" y="188" text-anchor="middle" fill="#111614" font-family="Inter, sans-serif" font-size="11" font-weight="600" letter-spacing="0.04em">ПРОСПЕКТ ЛЕНИНА</text>
+
+                <!-- Adjacent Building 47 -->
+                <rect x="344" y="64" width="76" height="68" rx="8" fill="#F7F9F8" stroke="#E2E6E4" stroke-width="1"/>
+                <text x="382" y="102" text-anchor="middle" fill="#5B6661" font-family="Inter, sans-serif" font-size="12" font-weight="500">д. 47</text>
+
+                <!-- Target Building: Prospekt Lenina, 49 -->
+                <rect x="434" y="42" width="182" height="90" rx="10" fill="#156047"/>
+                <text x="525" y="75" text-anchor="middle" fill="#FFFFFF" font-family="Plus Jakarta Sans, Inter, sans-serif" font-size="16" font-weight="700">ПРО НОГТИ</text>
+                <text x="525" y="97" text-anchor="middle" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="12" font-weight="500">пр-т Ленина, 49</text>
+                <text x="525" y="116" text-anchor="middle" fill="#ECF1EE" font-family="Inter, sans-serif" font-size="11">Вход со стороны проспекта</text>
+
+                <!-- Entrance Pointer -->
+                <line x1="525" y1="132" x2="525" y2="156" stroke="#156047" stroke-width="2"/>
+                <circle cx="525" cy="144" r="4" fill="#156047"/>
+
+                <!-- Bottom Right Landmark Box -->
+                <rect x="344" y="232" width="272" height="104" rx="10" fill="#F7F9F8" stroke="#E2E6E4" stroke-width="1"/>
+                <circle cx="376" cy="268" r="14" fill="#FFFFFF" stroke="#E2E6E4" stroke-width="1"/>
+                <path d="M 376 260 L 380 274 L 376 271 L 372 274 Z" fill="#156047"/>
+                <text x="400" y="265" fill="#111614" font-family="Inter, sans-serif" font-size="13" font-weight="600">Удобный подъезд и парковка</text>
+                <text x="400" y="285" fill="#5B6661" font-family="Inter, sans-serif" font-size="12">Остановка общественного транспорта</text>
+                <text x="400" y="303" fill="#5B6661" font-family="Inter, sans-serif" font-size="12">в 2 минутах ходьбы от входа</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>Про ногти · г. Лиски, проспект Ленина, 49</div>
+        <div class="tabular">Ежедневно 08:00–20:00 · +7 920 455-58-06</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Quick WhatsApp Booking Bar -->
+  <div id="quick-bar" class="quick-bar" aria-live="polite">
+    <div class="container">
+      <div class="quick-bar-inner">
+        <div class="quick-info">
+          <div>
+            <div class="quick-label">Заявка в WhatsApp</div>
+            <div class="quick-name" id="quick-name">—</div>
+          </div>
+          <div class="quick-metrics">
+            <span class="quick-time tabular" id="quick-time">0 мин</span>
+            <span class="quick-sum tabular" id="quick-sum">0 ₽</span>
+          </div>
+        </div>
+
+        <div class="quick-actions">
+          <button type="button" class="btn-clear" id="btn-clear" title="Сбросить выбор" aria-label="Сбросить выбор">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 6 6 18"/>
+              <path d="m6 6 12 12"/>
+            </svg>
+          </button>
+
+          <a href="https://wa.me/79204555806" target="_blank" rel="noopener noreferrer" class="btn btn-primary quick-wa-btn" id="quick-wa-link">
+            <span>Отправить в WhatsApp</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14"/>
+              <path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const WHATSAPP_PHONE = '79204555806';
+
+      const SERVICES = [
+        {
+          id: 'man-combo',
+          category: 'manicure',
+          title: 'Комбинированный маникюр без покрытия',
+          composition: 'Бережная обработка кутикулы фрезами и ножницами, придание формы, полировка и увлажняющее масло.',
+          duration: '45 мин',
+          minutes: 45,
+          price: 900
+        },
+        {
+          id: 'man-gel',
+          category: 'manicure',
+          title: 'Маникюр + выравнивание и покрытие гель-лаком',
+          composition: 'Комбинированный маникюр, выравнивание ногтевой пластины базой, однотонное покрытие гель-лаком встык к кутикуле.',
+          duration: '1 ч 30 мин',
+          minutes: 90,
+          price: 1600
+        },
+        {
+          id: 'man-full',
+          category: 'manicure',
+          title: 'Маникюр + снятие + покрытие гель-лаком',
+          composition: 'Безопасное снятие старого материала фрезой, комбинированный маникюр, выравнивание и покрытие цветом.',
+          duration: '1 ч 45 мин',
+          minutes: 105,
+          price: 1800
+        },
+        {
+          id: 'man-men',
+          category: 'manicure',
+          title: 'Мужской гигиенический маникюр',
+          composition: 'Аккуратная обработка кутикулы и боковых валиков, коррекция длины, матовая полировка ногтевой пластины.',
+          duration: '45 мин',
+          minutes: 45,
+          price: 1000
+        },
+        {
+          id: 'ped-toes',
+          category: 'pedicure',
+          title: 'Экспресс-педикюр (пальчики + гель-лак)',
+          composition: 'Обработка пальцев и кутикулы, коррекция формы ногтей, тонкое покрытие гель-лаком без утяжеления.',
+          duration: '1 ч 10 мин',
+          minutes: 70,
+          price: 1700
+        },
+        {
+          id: 'ped-full',
+          category: 'pedicure',
+          title: 'Полный педикюр (стопы + пальчики + гель-лак)',
+          composition: 'Атравматичная обработка стоп дисками, маникюр пальцев, покрытие гель-лаком и питательный крем.',
+          duration: '1 ч 40 мин',
+          minutes: 100,
+          price: 2200
+        },
+        {
+          id: 'ped-hygiene',
+          category: 'pedicure',
+          title: 'Гигиенический педикюр без покрытия',
+          composition: 'Деликатная шлифовка стоп и пяток, обработка ногтей и кутикулы, уходовый бальзам.',
+          duration: '1 ч 00 мин',
+          minutes: 60,
+          price: 1600
+        },
+        {
+          id: 'des-hardgel',
+          category: 'design',
+          title: 'Укрепление твёрдым гелем / полигелем',
+          composition: 'Армирование тонких и ломких ногтей жёстким материалом, восстановление архитектуры и чёткого квадрата.',
+          duration: '30 мин',
+          minutes: 30,
+          price: 500
+        },
+        {
+          id: 'des-french',
+          category: 'design',
+          title: 'Классический френч / втирка на все ногти',
+          composition: 'Ручная прорисовка ровной линии улыбки тонкой кистью или зеркальная жемчужная втирка.',
+          duration: '25 мин',
+          minutes: 25,
+          price: 400
+        },
+        {
+          id: 'des-minimal',
+          category: 'design',
+          title: 'Минималистичный дизайн (2–4 ногтя)',
+          composition: 'Тонкие линии, геометрия, стемпинг, слайдеры или светоотражающие акценты.',
+          duration: '15 мин',
+          minutes: 15,
+          price: 250
+        },
+        {
+          id: 'des-repair',
+          category: 'design',
+          title: 'Ремонт трещины или донаращивание угла',
+          composition: 'Восстановление сломанного угла или трещины акригелем для сохранения единой длины.',
+          duration: '15 мин',
+          minutes: 15,
+          price: 150
+        }
+      ];
+
+      let activeCategory = 'manicure';
+      const selectedIds = new Set();
+
+      const priceGrid = document.getElementById('price-grid');
+      const categoryTabs = Array.from(document.querySelectorAll('.category-tab'));
+      const quickBar = document.getElementById('quick-bar');
+      const quickName = document.getElementById('quick-name');
+      const quickTime = document.getElementById('quick-time');
+      const quickSum = document.getElementById('quick-sum');
+      const quickWaLink = document.getElementById('quick-wa-link');
+      const btnClear = document.getElementById('btn-clear');
+
+      function formatPrice(num) {
+        return num.toLocaleString('ru-RU') + ' ₽';
+      }
+
+      function formatMinutes(total) {
+        const h = Math.floor(total / 60);
+        const m = total % 60;
+        if (h === 0) return m + ' мин';
+        if (m === 0) return h + ' ч';
+        return h + ' ч ' + m + ' мин';
+      }
+
+      function renderPriceCards() {
+        const filtered = SERVICES.filter((item) => item.category === activeCategory);
+        priceGrid.innerHTML = '';
+
+        filtered.forEach((service) => {
+          const isSelected = selectedIds.has(service.id);
+          const card = document.createElement('article');
+          card.className = 'service-card' + (isSelected ? ' is-selected' : '');
+          card.setAttribute('role', 'button');
+          card.setAttribute('tabindex', '0');
+          card.setAttribute('aria-pressed', String(isSelected));
+
+          card.innerHTML = `
+            <div>
+              <div class="service-top">
+                <h3 class="service-title">${service.title}</h3>
+                <span class="service-select-badge">
+                  ${isSelected
+                    ? '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Выбрано</span>'
+                    : '<span>Выбрать</span>'}
+                </span>
+              </div>
+              <p class="service-composition">${service.composition}</p>
+            </div>
+            <div class="service-bottom">
+              <span class="service-duration tabular">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9"/>
+                  <path d="M12 7v5l3 2"/>
+                </svg>
+                <span>${service.duration}</span>
+              </span>
+              <span class="service-price tabular">${formatPrice(service.price)}</span>
+            </div>
+          `;
+
+          function toggleService() {
+            if (selectedIds.has(service.id)) {
+              selectedIds.delete(service.id);
+            } else {
+              selectedIds.add(service.id);
+            }
+            renderPriceCards();
+            updateQuickBar();
+          }
+
+          card.addEventListener('click', toggleService);
+          card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              toggleService();
+            }
+          });
+
+          priceGrid.appendChild(card);
+        });
+      }
+
+      function updateQuickBar() {
+        const chosen = SERVICES.filter((s) => selectedIds.has(s.id));
+
+        if (chosen.length === 0) {
+          quickBar.classList.remove('is-visible');
+          document.body.classList.remove('has-selection');
+          return;
+        }
+
+        const totalSum = chosen.reduce((acc, s) => acc + s.price, 0);
+        const totalMin = chosen.reduce((acc, s) => acc + s.minutes, 0);
+
+        quickName.textContent = chosen.length === 1
+          ? chosen[0].title
+          : 'Выбрано услуг: ' + chosen.length;
+        quickTime.textContent = '~' + formatMinutes(totalMin);
+        quickSum.textContent = formatPrice(totalSum);
+
+        const listLines = chosen
+          .map((item, index) => (index + 1) + '. ' + item.title + ' — ' + formatPrice(item.price))
+          .join('\n');
+
+        const message = [
+          'Здравствуйте! Хочу записаться в студию «Про ногти» (г. Лиски, пр-т Ленина, 49).',
+          '',
+          'Выбранные услуги:',
+          listLines,
+          '',
+          'Ориентировочное время: ' + formatMinutes(totalMin),
+          'Итого: ' + formatPrice(totalSum),
+          '',
+          'Подскажите, пожалуйста, свободные окошки.'
+        ].join('\n');
+
+        quickWaLink.href = 'https://wa.me/' + WHATSAPP_PHONE + '?text=' + encodeURIComponent(message);
+
+        quickBar.classList.add('is-visible');
+        document.body.classList.add('has-selection');
+      }
+
+      categoryTabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          activeCategory = tab.dataset.category;
+          categoryTabs.forEach((t) => {
+            t.setAttribute('aria-selected', String(t === tab));
+          });
+          renderPriceCards();
+        });
+      });
+
+      btnClear.addEventListener('click', () => {
+        selectedIds.clear();
+        renderPriceCards();
+        updateQuickBar();
+      });
+
+      renderPriceCards();
+    })();
+  </script>
+</body>
+</html>
